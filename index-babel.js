@@ -1,17 +1,18 @@
+export { make, find, union, makeSet };
 
-var make = function () {
+function make () {
   return { ranks : []
          , roots : []
          };
-};
+}
 
-var find = function (uf, x) {
+function find (uf, x) {
   if (uf.roots[x] !== x)
     uf.roots[x] = find(uf, uf.roots[uf.roots[x]]);
   return uf.roots[x];
-};
+}
 
-var union = function (uf, a, b) {
+function union (uf, a, b) {
   var aRoot = find(uf, a);
   var bRoot = find(uf, b);
 
@@ -23,14 +24,9 @@ var union = function (uf, a, b) {
     uf.roots[bRoot] = uf.roots[aRoot];
     uf.ranks[a] += 1;
   }
-};
+}
 
-var makeSet = function (uf) {
-  uf.roots.push(uf.roots.length);
+function makeSet (uf) {
   uf.ranks.push(0);
-};
-
-exports.make    = make;
-exports.find    = find;
-exports.union   = union;
-exports.makeSet = makeSet;
+  uf.roots.push(uf.roots.length);
+}
