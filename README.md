@@ -9,7 +9,7 @@ A disjoint-set data structure that partitions a set into disjoint subsets.
 * Dynamic graph connectivity.
 * Maze generation.
 * Image segmentation.
-* Used for managing shared color sets between visualisations in Silk.
+* Used for managing shared color sets between visualisations in [Silk](https://silk.co).
 
 ## Resources:
 * https://en.wikipedia.org/wiki/Disjoint-set_data_structure - Implementation details included here.
