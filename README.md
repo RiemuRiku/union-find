@@ -1,5 +1,15 @@
 # union-find
-JS UnionFind implementation
+
+JS UnionFind implementation.
+
+A disjoint-set data structure that partitions a set into disjoint subsets.
+
+## Applications
+
+* Dynamic graph connectivity.
+* Maze generation.
+* Image segmentation.
+* Used for managing shared color sets between visualisations in Silk.
 
 ## Resources:
 * https://en.wikipedia.org/wiki/Disjoint-set_data_structure - Implementation details included here.
